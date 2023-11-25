@@ -11,6 +11,7 @@ const LoginForm = () => {
     password: "",
   });
   const { user, loginUser } = useAuth();
+  
   useEffect(() => {
     if (user.id) {
       navigate(`/users/${user.id}/posts`);

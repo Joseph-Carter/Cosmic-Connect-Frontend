@@ -1,5 +1,6 @@
-import { useState, createContext, useCallback, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, createContext, useCallback, useContext } 
+from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL;
 const AuthContext = createContext();
@@ -12,7 +13,7 @@ export const AuthProvider = (props) => {
   });
 
   const loginUser = (userInput) => {
-    console.log(userInput);
+      console.log(userInput)
     fetch(`${API}/users/`, {
       method: "POST",
       body: JSON.stringify(userInput),
@@ -20,12 +21,14 @@ export const AuthProvider = (props) => {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => response.json())
-      .then((data) => {
-        setUser(data);
-        navigate(`/users/${data.id}/posts`);
-      });
+     .then((response) => response.json())
+     .then(data => {
+        setUser(data.id)
+        navigate(`/users/${data.id}/posts`)
+     })
   };
+
+  
 
   const value = {
     user,

@@ -28,12 +28,12 @@ const SignUpForm = () => {
   };
 
   const handleTextInput = (e) => {
-    setUserInput({ ...userInput, [e.target.id]: e.target.value });
+    setUser({ ...user, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginUser(userInput);
+    addUser();
   };
 
   return (
