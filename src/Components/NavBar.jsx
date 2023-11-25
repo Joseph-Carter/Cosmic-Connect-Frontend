@@ -9,7 +9,7 @@ const NavBar = () => {
                 <Link to={`/users/${userId}/posts`}>Posts</Link>
             </h2>
             <h2>
-                <Link to={`/users/${userId}/newpost`}>New Post</Link>
+                <Link to={`/users/${userId}/posts/newpost`}>New Post</Link>
             </h2>
         </nav>
     );

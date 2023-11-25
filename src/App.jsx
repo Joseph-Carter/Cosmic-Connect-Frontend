@@ -5,6 +5,7 @@ import { AuthProvider } from './Components/UserAuth/UserContext'
 import LogIn from './Pages/LogIn'
 import SignUp from './Pages/SignUp'
 import Index from './Pages'
+import New from './Pages/New'
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/' element={<LogIn />} /> 
             <Route path='/signup' element={<SignUp />} />
             <Route path='/users/:userId/posts' element={<Index />} />
+            <Route path='/users/:userId/posts/newpost' element={<New />} />
           </Routes>
         </AuthProvider>
       </Router>
