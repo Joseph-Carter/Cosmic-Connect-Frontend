@@ -4,27 +4,22 @@ import { Link, useParams } from 'react-router-dom';
 const API = import.meta.env.VITE_API_URL;
 
 const Post = ({ post }) => {
-    const [userInfo, setUserInfo] = useState([]);
     const { userId } = useParams();
-
-    useEffect(() => {
-        fetch(`${API}/users/${userId}`)
-        .then((response) => {response.json()})
-        .then((responseJSON) => {
-            console.log(responseJSON)
-            setUserInfo(responseJSON)
-        })
-        .catch((error) => {console.log(error)})
-    }, [])
 
     return (
         <div>
-            <Link to={`/posts/${post.id}`}>
+            <Link to={`/users/${userId}/posts/${post.id}`}>
                 <div className='postInfo'>
                     <div className='postInfo-header'>
-                        <span>{userInfo.first_name} {userInfo.last_name}</span>
+                        <span></span>
                         <span className='postInfo-header-username'>{post.title}</span>
                     </div>
+                    <div className='postInfo-body'>
+                        <img src={post.image}></img><br />
+                        <span>{post.description}</span><br />
+                        <h6>{post.tags}</h6>
+                    </div>
+                    
                 </div>
             </Link>
         </div>

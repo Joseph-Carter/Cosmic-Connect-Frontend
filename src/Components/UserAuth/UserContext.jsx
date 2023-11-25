@@ -23,8 +23,9 @@ export const AuthProvider = (props) => {
     })
      .then((response) => response.json())
      .then(data => {
-        setUser(data.id)
-        navigate(`/users/${data.id}/posts`)
+       setUser(data)
+       console.log(data)
+        navigate(`/users/${data.user.id}/posts`)
      })
   };
 
