@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./UserAuth/UserContext";
+import "./LoginForm.css";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -11,7 +12,7 @@ const LoginForm = () => {
     password: "",
   });
   const { user, loginUser } = useAuth();
-  
+
   useEffect(() => {
     if (user.id) {
       navigate(`/users/${user.id}/posts`);
@@ -29,32 +30,40 @@ const LoginForm = () => {
 
   return (
     <div className="loginForm">
+      <header>Welcome Back</header>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
+        {/* <label htmlFor="email">Email</label> */}
         <input
+          className="inputEmail"
           id="email"
           value={userInput.email}
           type="text"
           onChange={handleTextInput}
-          placeholder="email"
+          placeholder="Enter email"
           required
         />
-        <label htmlFor="password">Password:</label>
+        <br />
+        {/* <label htmlFor="password">Password</label> */}
         <input
+          className="inputPassword"
           id="password"
           value={userInput.password}
           type="password"
           onChange={handleTextInput}
-          placeholder="password"
+          placeholder="Enter password"
           required
         />
         <br />
-        <button type="submit">Submit</button>
+        <button className="loginButton authButtons" type="submit">
+          Log In
+        </button>
       </form>
       <br />
-      <button type="button">
-        <Link to={`/signup`}>Sign Up</Link>
-      </button>
+      <Link to={`/signup`} className="signupButtonWord">
+        <button className="signupButton authButtons" type="button">
+          Sign Up
+        </button>
+      </Link>
     </div>
   );
 };

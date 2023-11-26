@@ -9,7 +9,7 @@ const Posts = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetch(`${API}/users/${userId}/posts`)
+        fetch(`${API}/users/1/posts`)
             .then((response) => response.json())
             .then((responseJSON) => {
                 console.log(responseJSON);
@@ -18,6 +18,11 @@ const Posts = () => {
             .catch((error) => {
                 console.log(error);
             });
+            fetch(`${API}/users/1`)
+            .then((response) => response.json())
+            .then((responseJSON) => {
+                console.log(responseJSON);
+            })
     }, []);
     
 

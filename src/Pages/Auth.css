@@ -1,0 +1,64 @@
+body {
+    background: #000;
+  }
+  
+  .splashBackground {
+    position: absolute;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+  }
+  
+  .splashBackground-image {
+    animation: kenburns 30s linear infinite;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    scale: 1.2;
+    width: 100vw;
+  }
+
+  .cosmicContents {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .cosmicConnectLogo{
+    height: 150px;
+    padding-bottom: 50px;
+    padding-top: 24px;
+    padding-left: 24px;
+  }
+
+  
+  .splashBackground-image:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+  .splashBackground-image:nth-child(2) {
+    animation-delay: 10s;
+    background-image: url("https://images.unsplash.com/photo-1504333638930-c8787321eee0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+  .splashBackground-image:nth-child(3) {
+    animation-delay: 20s;
+    background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+  
+  @keyframes kenburns {
+    25% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: .8;
+      scale: 1;
+    }
+  
+    60% {
+      opacity: 0;
+    }
+  }
