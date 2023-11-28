@@ -2,7 +2,7 @@ import React from 'react';
 import Posts from "../Components/Posts"
 import NavBar from '../Components/NavBar';
 
-const Index = () => {
+const PostIndex = () => {
     return (
         <div>
             <NavBar />
@@ -11,4 +11,4 @@ const Index = () => {
     );
 }
 
-export default Index;
+export default PostIndex;

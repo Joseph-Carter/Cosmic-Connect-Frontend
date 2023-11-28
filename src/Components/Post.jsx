@@ -3,14 +3,18 @@ import { Link, useParams } from 'react-router-dom';
 
 const API = import.meta.env.VITE_API_URL;
 
-const Post = ({ post }) => {
+const Post = ({ post, index }) => {
   const [user, setUser] = useState(null);
+  const { userId } = useParams();
 
   useEffect(() => {
-    fetch(`${API}/users/${post.user_id}`)
+    fetch(`${API}/users/${userId}/posts/${post.id}`)
+    // console.log(post)
       .then((response) => response.json())
       .then((userData) => {
+        console.log(userData)
         setUser(userData);
+        console.log(user)
       })
       .catch((error) => {
         console.error('Error fetching user:', error);
@@ -18,12 +22,12 @@ const Post = ({ post }) => {
   }, [post.user_id]);
 
   return (
-    <div>
+    <div className='singlePost'>
       {user && (
         <Link to={`/users/${user.id}/posts/${post.id}`}>
           <div className='postInfo'>
             <div className='postInfo-header'>
-              <span>{`${user.first_name} ${user.last_name}`}</span><br />
+              <span>{`${post.first_name} ${post.last_name}`}</span><br />
               <span className='postInfo-header-username'>{post.title}</span>
             </div>
             <div className='postInfo-body'>

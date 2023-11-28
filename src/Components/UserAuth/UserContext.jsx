@@ -13,22 +13,17 @@ export const AuthProvider = (props) => {
   });
 
   const loginUser = (userInput) => {
-      // console.log(userInput)
-      console.log(API)
+      console.log(userInput)
     fetch(`${API}/users/`, {
       method: "POST",
       body: JSON.stringify(userInput),
       headers: {
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
     })
-     .then((response) => {
-      console.log(response)
-      return response.json()})
+     .then((response) => response.json())
      .then(data => {
-       setUser(data)
-       console.log(data)
+        setUser(data)
         navigate(`/users/${data.user.id}/posts`)
      })
   };
@@ -37,7 +32,6 @@ export const AuthProvider = (props) => {
 
   const value = {
     user,
-    setUser,
     loginUser,
   };
   return (

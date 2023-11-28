@@ -8,8 +8,9 @@ import {
 import { AuthProvider } from "./Components/UserAuth/UserContext";
 
 import Auth from "./Pages/Auth";
-import Index from "./Pages";
+import PostIndex from "./Pages/PostIndex";
 import New from "./Pages/New";
+import Show from "./Pages/Show";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Auth />} />
             <Route path="/signup" element={<Auth />} />
-            <Route path="/users/:userId/posts" element={<Index />} />
+            <Route path="/users/:userId/posts" element={<PostIndex />} />
+            <Route path="/users/:userId/posts/:postId" element={<Show />} />
             <Route path="/users/:userId/posts/newpost" element={<New />} />
           </Routes>
         </AuthProvider>

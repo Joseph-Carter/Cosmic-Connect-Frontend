@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignUpForm.css"
+import "./SignUpForm.css";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -39,53 +39,66 @@ const SignUpForm = () => {
 
   return (
     <div className="signUpForm">
+      <header>
+        Sign Up Form
+      </header>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name:</label>
+        {/* <label htmlFor="firstName">First Name:</label> */}
         <input
+          className="firstName signupInput"
           id="firstName"
           value={user.firstName}
           type="text"
           onChange={handleTextInput}
-          placeholder="First Name"
+          placeholder="first name"
           required
         />
-        <label htmlFor="lastName">Last Name:</label>
+        <br />
+        {/* <label htmlFor="lastName">Last Name:</label> */}
         <input
+          className="lastName signupInput"
           id="lastName"
           value={user.lastName}
           type="text"
           onChange={handleTextInput}
-          placeholder="Last Name"
+          placeholder="last name"
           required
         />
-        <label htmlFor="email">Email:</label>
+        <br />
+        {/* <label htmlFor="email">Email:</label> */}
         <input
+          className="email signupInput"
           id="email"
           value={user.email}
           type="text"
           onChange={handleTextInput}
           placeholder="email"
           required
-         />
-         <label htmlFor="password">Password:</label>
-         <input
+        />
+        <br />
+        {/* <label htmlFor="password">Password:</label> */}
+        <input
+          className="password signupInput"
           id="password"
           value={user.password}
           type="password"
           onChange={handleTextInput}
           placeholder="password"
           required
-         />
-         <label htmlFor="passwordConfirmation">Confirm Password:</label>
-         <input
+        />
+        <br />
+        {/* <label htmlFor="passwordConfirmation">Confirm Password:</label> */}
+        <input
+          className="confirmpassword signupInput"
           id="passwordConfirmation"
           value={user.passwordConfirmation}
           type="password"
           onChange={handleTextInput}
-          placeholder="password"
+          placeholder="confirm password"
           required
-         />
-         <button type="submit">Submit</button>
+        />
+        <br />
+        <button className="submitFormButton" type="submit">Submit</button>
       </form>
     </div>
   );

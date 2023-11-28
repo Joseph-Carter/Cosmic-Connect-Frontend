@@ -8,10 +8,11 @@
   padding: 36px;
 }
 
-header {
+.welcomeHeader {
   font-family: "Space Grotesk", sans-serif;
   font-size: xx-large;
   padding-bottom: 10px;
+  color: rgb(255, 249, 249);
 }
 
 label {
@@ -41,8 +42,18 @@ label {
   border-radius: 6px;
 }
 
-input[type="password"] {
+.inputPassword {
   margin-bottom: 25px;
+}
+.inputfield{
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  /* -webkit-text-fill-color: white; */
+  /* -webkit-box-shadow: 0 0 0px 1000px transparent inset; */
+
 }
 
 .authButtons {
@@ -60,29 +71,29 @@ input[type="password"] {
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
 }
-.authButtons::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 249, 249);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+.authButtons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 249, 249);
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
 }
 .authButtons:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgb(255, 249, 249);
-  }
-  .authButtons:hover {
-    background-color: rgb(48, 48, 48);
-    color: rgb(255, 249, 249);
-    box-shadow: 0 0 25px rgb(255, 249, 249);
-    text-shadow: 0 0 10px rgb(255, 249, 249);
-    border: 2px solid rgb(255, 249, 249);
-  }
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(255, 249, 249);
+}
+.authButtons:hover {
+  background-color: rgb(48, 48, 48);
+  color: rgb(255, 249, 249);
+  box-shadow: 0 0 25px rgb(255, 249, 249);
+  text-shadow: 0 0 10px rgb(255, 249, 249);
+  border: 2px solid rgb(255, 249, 249);
+}
 .signupButtonWord {
   text-decoration: none;
 }

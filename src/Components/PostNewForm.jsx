@@ -21,11 +21,11 @@ const PostNewForm = () => {
   const createPost = () => {
     fetch(`${API}/users/${userId}/posts`, {
       method: "POST",
-      body: JSON.stringify(newPost),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(newPost),
     })
       .then((response) => {
         if (!response) {
@@ -34,9 +34,8 @@ const PostNewForm = () => {
         return response.json();
       })
       .then((data) => {
-        if(data) {
-            navigate(`/users/${userId}/posts`);
-        }
+        if(data) 
+        navigate(`/users/${userId}/posts`);
       })
       .catch((error) => console.error(error));
   };
@@ -75,7 +74,6 @@ const PostNewForm = () => {
           placeholder="Title of post"
           required
         />
-        <br />
         <label htmlFor="description">Description:</label>
         <input
           id="description"
@@ -85,7 +83,6 @@ const PostNewForm = () => {
           placeholder="Description"
           required
          />
-         <br />
          <label htmlFor="image">Image URL:</label>
          <input 
           id="image"
@@ -94,7 +91,6 @@ const PostNewForm = () => {
           onChange={handleTextInput}
           placeholder="Enter image URL (optional)"
          />
-         <br />
          <label htmlFor="tags">Tags:</label>
          <input
           id="tags"
@@ -103,7 +99,6 @@ const PostNewForm = () => {
           onChange={handleTextInput}
           placeholder="Enter tags (planets, solar system, cosmis)"
          />
-         <br />
          <label htmlFor="super-interest">Favorite Topic: </label>
          <input
           id="super-interest"
@@ -111,7 +106,6 @@ const PostNewForm = () => {
           value={newPost.super_interest}
           onChange={handleCheckbox}
          />
-         <br />
          <label htmlFor="interest-level">Level of Interest in Topic:</label>
          <input
           id="interest-level"

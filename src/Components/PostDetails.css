@@ -1,0 +1,69 @@
+
+/* Container for the entire post details section */
+.postDetails {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: url('https://b.kisscc0.com/20180517/vje/kisscc0-bethel-church-desktop-wallpaper-music-blog-design-5afd53a3734f09.4586713015265514594723.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+  
+/* Styles for the post header section */
+.postInfo-header {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+  
+.postInfo-header span {
+    display: block;
+    font-size: 18px;
+}
+  
+.postInfo-header .postInfo-header-username {
+    font-size: 24px;
+    color: #333;
+}
+  
+/* Styles for the post body section */
+.postInfo-body img {
+    max-width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+  
+.postInfo-body span {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+  
+.postInfo-body h6 {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Styles for the comment section */
+.commentSection {
+    margin-top: 20px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+}
+  
+/* Styles for individual comments */
+.comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+.comment p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}

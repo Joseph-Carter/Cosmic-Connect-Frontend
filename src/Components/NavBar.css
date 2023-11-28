@@ -1,0 +1,15 @@
+/* add purple to black lineral gradient on navbar  */
+.navbar-container{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, purple, black);
+}
+.cosmicConnectLogo{
+    height: 90px;
+    padding-bottom: 50px;
+    padding-top: 24px;
+    padding-left: 24px;
+  }
+.navlink{
+    padding-left: 60px;
+}

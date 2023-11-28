@@ -30,11 +30,11 @@ const LoginForm = () => {
 
   return (
     <div className="loginForm">
-      <header>Welcome Back</header>
+      <header className="welcomeHeader">Welcome Back</header>
       <form onSubmit={handleSubmit}>
         {/* <label htmlFor="email">Email</label> */}
         <input
-          className="inputEmail"
+          className="inputEmail inputfield"
           id="email"
           value={userInput.email}
           type="text"
@@ -45,7 +45,7 @@ const LoginForm = () => {
         <br />
         {/* <label htmlFor="password">Password</label> */}
         <input
-          className="inputPassword"
+          className="inputPassword inputfield"
           id="password"
           value={userInput.password}
           type="password"
