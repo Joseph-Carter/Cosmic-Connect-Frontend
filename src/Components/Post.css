@@ -1,0 +1,21 @@
+.singlePost {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .singlePost a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .postInfo-header-title{
+    color: #fff;
+  }
+  
+  .singlePost a:hover {
+    color: #fff;
+  }
+  

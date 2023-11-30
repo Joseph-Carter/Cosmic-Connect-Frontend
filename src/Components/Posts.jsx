@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Post from "./Post";
+import "./Posts.css";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -12,7 +13,6 @@ const Posts = () => {
     fetch(`${API}/users/${userId}/posts`)
       .then((response) => response.json())
       .then((responseJSON) => {
-        console.log(responseJSON);
         setPosts(responseJSON);
       })
       .catch((error) => {
@@ -21,7 +21,7 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="posts">
+    <div className="postlist">
       {posts
         .sort((prev, next) => (prev.uploaded_at >= next.uploaded_at ? -1 : 1))
         .map((post) => (

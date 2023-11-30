@@ -1,15 +1,74 @@
-/* add purple to black lineral gradient on navbar  */
-.navbar-container{
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to bottom, purple, black);
-}
-.cosmicConnectLogo{
-    height: 90px;
-    padding-bottom: 50px;
-    padding-top: 24px;
-    padding-left: 24px;
+.navlink a {
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #02680c;
+    transition: background-position 0.3s ease-in-out; 
   }
-.navlink{
-    padding-left: 60px;
-}
+  .navlink a:hover {
+    background-position: 100%; 
+    color: #8a55ad;
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.741),
+      rgba(0, 0, 0, 0.741),
+      rgba(0, 0, 0, 0.741),
+      rgba(0, 0, 0, 0.549),
+      transparent
+    );
+    width: 20%;
+    min-width: 200px;
+    height: 100vh;
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .cosmicConnectLogo {
+    height: 100px;
+    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-left: 16px; 
+    width: 100px;
+  }
+  
+  .navlink {
+    padding-left: 16px; 
+  }
+  
+  @media screen and (max-width: 950px) {
+    .navbar-container {
+      width: 100%; 
+      min-width: auto; 
+      height: auto; 
+      flex-direction: row;
+      align-items: center; 
+      justify-content: flex-start; 
+      padding: 10px; 
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  
+    .cosmicConnectLogo {
+      padding-bottom: 12px; 
+      padding-top: 12px; 
+      padding-left: 8px; 
+    }
+  
+    .navlink {
+      padding: 8px; 
+    }
+  }
+  
+  

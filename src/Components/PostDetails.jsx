@@ -1,40 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import "./PostDetails.css"
-import PostComment from "./PostComment";
-
+import { Link, useNavigate, useParams } from "react-router-dom";
+import "./PostDetails.css";
+// import PostComment from "./PostComment";
 
 const API = import.meta.env.VITE_API_URL;
 
 const PostDetails = () => {
   const { userId, postId } = useParams();
   const navigate = useNavigate();
-  const [comments, setComments] = useState([
-    {
-      id: 0,
-      comment: "",
-      commented_at: Date.now,
-      post_id: 0,
-      user_id: 0,
-    },
-  ]);
+  // const [comments, setComments] = useState([
+  //   {
+  //     id: 0,
+  //     comment: "",
+  //     commented_at: Date.now,
+  //     post_id: 0,
+  //     user_id: 0,
+  //   },
+  // ]);
   const [post, setPost] = useState({});
 
   useEffect(() => {
     fetch(`${API}/users/${userId}/posts/${postId}`)
       .then((response) => response.json())
       .then((responseJSON) => {
-        console.log(responseJSON);
         setPost(responseJSON);
       })
       .catch((error) => console.log(error));
 
-    fetch(`${API}/users/${userId}/posts/${postId}/comments/${postId}`)
-      .then((response) => response.json())
-      .then((postComments) => {
-        setComments(postComments);
-      })
-      .catch((err) => console.log(err));
+    // fetch(`${API}/users/${userId}/posts/${postId}/comments/${postId}`)
+    //   .then((response) => response.json())
+    //   .then((postComments) => {
+    //     setComments(postComments);
+    //   })
+    //   .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = () => {
@@ -53,20 +51,31 @@ const PostDetails = () => {
       <div className="postInfo-header">
         <span>{`${post.first_name} ${post.last_name}`}</span>
         <br />
-        <span className="postInfo-header-username">{post.title}</span>
+        <span className="postInfo-header-title">{post.title}</span>
       </div>
       <div className="postInfo-body">
         {post.image ? <img src={post.image} /> : null}
         <br />
         <span>{post.description}</span>
+        <span>
+          {new Date(Number(post.uploaded_at) * 1000).toLocaleString()}
+        </span>
         <br />
         <h6>{post.tags}</h6>
-        <div className="postDetails commentSection">
-            {comments.sort((prev, next) => (prev.commented_at >= next.commented_at ? -1 : 1) ).map((comment) => (
+        {/* <div className="postDetails commentSection">
+          {comments
+            .sort((prev, next) =>
+              prev.commented_at >= next.commented_at ? -1 : 1
+            )
+            .map((comment) => (
               <PostComment comment={comment} key={comment.id} />
             ))}
-        </div>
+        </div> */}
       </div>
+      <Link to={`/users/${userId}/posts/${postId}/edit`}>
+        <button>Edit</button>
+      </Link>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };

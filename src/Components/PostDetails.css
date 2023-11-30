@@ -1,69 +1,75 @@
-
-/* Container for the entire post details section */
 .postDetails {
     margin: 20px;
     padding: 20px;
+    padding-left: 150px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-image: url('https://b.kisscc0.com/20180517/vje/kisscc0-bethel-church-desktop-wallpaper-music-blog-design-5afd53a3734f09.4586713015265514594723.jpg');
+    background-image: url("https://www.coolmathgames.com/sites/default/files/styles/blog_node_image/public/2022-04/Nostalgic%20Games%20Blog%20Thumbnail.png?itok=3AuUGLUM");
     background-size: cover;
     background-position: center;
     color: #fff;
-}
-  
-/* Styles for the post header section */
-.postInfo-header {
+    padding-left: 20%;
+  }
+  .postInfo-header {
     margin-bottom: 15px;
     font-weight: bold;
-}
-  
-.postInfo-header span {
+  }
+  .postInfo-header span {
     display: block;
     font-size: 18px;
-}
-  
-.postInfo-header .postInfo-header-username {
+  }
+  .postInfo-header .postInfo-header-username {
     font-size: 24px;
     color: #333;
-}
+  }
   
-/* Styles for the post body section */
-.postInfo-body img {
+  .postInfo-body img {
     max-width: 100%;
     margin-bottom: 15px;
     border-radius: 5px;
-}
-  
-.postInfo-body span {
+  }
+  .postInfo-body span {
     display: block;
     margin-bottom: 10px;
-    color: #333;
-}
-  
-.postInfo-body h6 {
-    color: #555;
+    color: #fcfcfc;
+  }
+  .postInfo-body h6 {
+    color: #ffffff;
     font-weight: bold;
     margin-bottom: 15px;
-}
-
-/* Styles for the comment section */
-.commentSection {
+  }
+  
+  .commentSection {
     margin-top: 20px;
     background-color: black;
     padding: 15px;
     border-radius: 5px;
-}
+  }
   
-/* Styles for individual comments */
-.comment {
+  .comment {
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-}
-  
-.comment p {
+  }
+  .comment p {
     margin: 0;
     font-size: 14px;
     color: black;
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .postDetails {
+      padding-left: 10px; 
+    }
+    .postInfo-header .postInfo-header-username {
+      font-size: 20px; 
+    }
+    .postInfo-body h6 {
+      margin-bottom: 10px;
+    }
+    .commentSection {
+      padding: 10px;
+    }
+  }
+  

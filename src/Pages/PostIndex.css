@@ -1,0 +1,16 @@
+.posts {
+    background-image: url('https://cdn.dribbble.com/users/501233/screenshots/2472911/media/9cce1c3581ff6e802a35eab907b0c4a6.jpg?resize=400x0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-right: 10%;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .posts {
+        padding-right: 5%; /* Adjust the padding for smaller screens */
+    }
+}
+
+/* You can add more media queries for different screen sizes as needed */

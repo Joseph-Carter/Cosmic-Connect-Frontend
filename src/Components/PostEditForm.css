@@ -1,74 +1,65 @@
-.loginForm {
+.edit-post {
   background-color: #100224bd;
   border-radius: 20px;
   text-align: center;
-  height: 370px;
-  width: 320px;
+  height: auto;
+  width: 80%;
+  max-width: 320px;
   margin: auto;
   padding: 36px;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
 
-.welcomeHeader {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: xx-large;
-  padding-bottom: 10px;
-  color: rgb(255, 249, 249);
-}
-
-label {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-}
-
-:placeholder-shown {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bolder;
-  font-size: 18px;
-}
-.inputEmail {
+.inputeditfield {
   background: #10022433;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 6px;
-}
-.inputPassword {
-  background: #10022433;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 6px;
-}
-
-.inputPassword {
-  margin-bottom: 25px;
-}
-.inputfield {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   font-size: 18px;
   color: white;
-  background-color: transparent;
+  
 }
 
-.authButtons {
+.edittextfield{
+  resize: vertical; 
+    height: 150px; 
+    min-height: 150px; 
+    width: calc(100% - 40px); 
+    padding: 12px 20px; 
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+    font-size: 18px;
+    border: 1px solid #10022433;
+    background: #10022433;
+    background-color: #100224bd;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.form-submit {
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
   position: relative;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   transition: 1s;
   background-color: rgb(255, 249, 249);
   padding: 10px 15px;
   font-weight: 700;
   color: #100224bd;
-  font-size: 20px;
   font-family: "Courier New", Courier, monospace;
 }
-.authButtons::before {
+
+.form-submit::before {
   content: "";
   position: absolute;
   top: 0;
@@ -80,17 +71,31 @@ label {
   transform: scale(0.9);
   z-index: -1;
 }
-.authButtons:hover::before {
+
+.form-submit:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgb(255, 249, 249);
 }
-.authButtons:hover {
+
+.form-submit:hover {
   background-color: rgb(48, 48, 48);
   color: rgb(255, 249, 249);
   box-shadow: 0 0 25px rgb(255, 249, 249);
   text-shadow: 0 0 10px rgb(255, 249, 249);
   border: 2px solid rgb(255, 249, 249);
 }
-.signupButtonWord {
-  text-decoration: none;
+
+.label {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-post {
+    padding: 20px;
+    padding-top: 60px;
+  }
+
+  .form-submit {
+    font-size: 18px;
+  }
 }

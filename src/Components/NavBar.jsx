@@ -16,6 +16,9 @@ const NavBar = () => {
       <h2 className="newPosts navlink">
         <Link to={`/users/${userId}/posts/new`}>New Post</Link>
       </h2>
+      <h2 className="logout navlink">
+        <Link to={`/`}>Log Out</Link>
+      </h2>
     </nav>
   );
 };

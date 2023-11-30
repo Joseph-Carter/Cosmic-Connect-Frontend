@@ -32,7 +32,6 @@ const LoginForm = () => {
     <div className="loginForm">
       <header className="welcomeHeader">Welcome Back</header>
       <form onSubmit={handleSubmit}>
-        {/* <label htmlFor="email">Email</label> */}
         <input
           className="inputEmail inputfield"
           id="email"
@@ -43,7 +42,6 @@ const LoginForm = () => {
           required
         />
         <br />
-        {/* <label htmlFor="password">Password</label> */}
         <input
           className="inputPassword inputfield"
           id="password"

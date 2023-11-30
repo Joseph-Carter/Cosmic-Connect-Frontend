@@ -1,0 +1,10 @@
+.postlist {
+    padding-left: 25%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .postlist {
+        padding-left: 10%; 
+    }
+}
