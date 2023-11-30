@@ -6,6 +6,7 @@
     background-clip: text;
     color: #02680c;
     transition: background-position 0.3s ease-in-out; 
+    text-decoration: none;
   }
   .navlink a:hover {
     background-position: 100%; 
