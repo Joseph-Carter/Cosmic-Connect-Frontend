@@ -39,23 +39,29 @@ const PostEditForm = () => {
     })
       .then((response) => {
         if (!response.ok) {
+          alert("Make sure it's your post that you're trying to edit")
           throw new Error("Network response was not okay.");
         }
         return response.json();
       })
       .then((data) => {
+        alert("Post updated successfully:");
         navigate(`/users/${userId}/posts/${postId}`);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error("Error updating post:", error);
+      });
   };
+  
 
   const handleTextInput = (e) => {
     setEditPost({ ...editPost, [e.target.id]: e.target.value });
   };
 
   const handleCheckbox = () => {
-    setEditPost({ ...editPost, super_interest: !post.super_interest });
+    setEditPost({ ...editPost, super_interest: !editPost.super_interest });
   };
+  
 
   const handleNumberInput = (e) => {
     const value = e.target.value;
