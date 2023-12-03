@@ -7,6 +7,12 @@
   margin: auto;
   padding: 36px;
 }
+.signupheader{
+  font-family: "Space Grotesk", sans-serif;
+  font-size: xx-large;
+  padding-bottom: 10px;
+  color: rgb(255, 249, 249);
+}
 .signupInput {
   background: #10022433;
   width: 100%;
